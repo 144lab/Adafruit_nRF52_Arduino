@@ -60,6 +60,47 @@ feather52832.menu.debug.l3=Level 3 (Segger SystemView)
 feather52832.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
 
 # ----------------------------------
+# isp1507spiflash nRF52832
+# ----------------------------------
+isp1507spiflash.name=144Lab isp1507spiflash nRF52832
+isp1507spiflash.bootloader.tool=bootburn
+
+# Upload
+isp1507spiflash.upload.tool=nrfutil
+isp1507spiflash.upload.protocol=nrfutil
+isp1507spiflash.upload.use_1200bps_touch=false
+isp1507spiflash.upload.wait_for_upload_port=false
+isp1507spiflash.upload.native_usb=false
+isp1507spiflash.upload.maximum_size=290816
+isp1507spiflash.upload.maximum_data_size=51072
+
+# Build
+isp1507spiflash.build.mcu=cortex-m4
+isp1507spiflash.build.f_cpu=64000000
+isp1507spiflash.build.board=NRF52832_FEATHER
+isp1507spiflash.build.core=nRF5
+isp1507spiflash.build.variant=isp1507spiflash
+isp1507spiflash.build.extra_flags=-DNRF52832_XXAA -DNRF52
+isp1507spiflash.build.ldscript=nrf52832_s132_v6.ld
+
+# SofDevice Menu
+isp1507spiflash.menu.softdevice.s132v6=0.2.13 SoftDevice s132 6.1.1
+isp1507spiflash.menu.softdevice.s132v6.build.sd_name=s132
+isp1507spiflash.menu.softdevice.s132v6.build.sd_version=6.1.1
+isp1507spiflash.menu.softdevice.s132v6.build.sd_fwid=0x00B7
+
+# Debug Menu
+isp1507spiflash.menu.debug.l0=Level 0 (Release)
+isp1507spiflash.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+isp1507spiflash.menu.debug.l1=Level 1 (Error Message)
+isp1507spiflash.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+isp1507spiflash.menu.debug.l2=Level 2 (Full Debug)
+isp1507spiflash.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+isp1507spiflash.menu.debug.l3=Level 3 (Segger SystemView)
+isp1507spiflash.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+
+
+# ----------------------------------
 # Bluefruit Feather nRF52840 Express
 # ----------------------------------
 feather52840.name=Adafruit Bluefruit Feather nRF52840 Express
