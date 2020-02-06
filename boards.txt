@@ -355,3 +355,46 @@ pca10056.menu.debug.l2=Level 2 (Full Debug)
 pca10056.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
 pca10056.menu.debug.l3=Level 3 (Segger SystemView)
 pca10056.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+
+# ----------------------------------
+# 144lab hsm-band
+# ----------------------------------
+ssci_hsm_band.name=iSP1807 Sensor Board (ssci_hsm_band)
+ssci_hsm_band.bootloader.tool=bootburn
+
+# Upload
+ssci_hsm_band.upload.tool=nrfutil
+ssci_hsm_band.upload.protocol=nrfutil
+ssci_hsm_band.upload.use_1200bps_touch=true
+ssci_hsm_band.upload.wait_for_upload_port=true
+ssci_hsm_band.upload.maximum_size=815104
+ssci_hsm_band.upload.maximum_data_size=248832
+
+# Build
+ssci_hsm_band.build.mcu=cortex-m4
+ssci_hsm_band.build.f_cpu=64000000
+ssci_hsm_band.build.board=NRF52840_PCA10056
+ssci_hsm_band.build.core=nRF5
+ssci_hsm_band.build.variant=ssci_hsm_band
+ssci_hsm_band.build.usb_manufacturer="Nordic"
+ssci_hsm_band.build.usb_product="ISP1807"
+ssci_hsm_band.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+ssci_hsm_band.build.ldscript=nrf52840_s140_v6.ld
+ssci_hsm_band.build.vid=0x239A
+ssci_hsm_band.build.pid=0x0052
+
+# SofDevice Menu
+ssci_hsm_band.menu.softdevice.s140v6=0.2.13 SoftDevice s140 6.1.1
+ssci_hsm_band.menu.softdevice.s140v6.build.sd_name=s140
+ssci_hsm_band.menu.softdevice.s140v6.build.sd_version=6.1.1
+ssci_hsm_band.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+# Debug Menu
+ssci_hsm_band.menu.debug.l0=Level 0 (Release)
+ssci_hsm_band.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+ssci_hsm_band.menu.debug.l1=Level 1 (Error Message)
+ssci_hsm_band.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+ssci_hsm_band.menu.debug.l2=Level 2 (Full Debug)
+ssci_hsm_band.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+ssci_hsm_band.menu.debug.l3=Level 3 (Segger SystemView)
+ssci_hsm_band.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
