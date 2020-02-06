@@ -1,4 +1,4 @@
-NAME=144lab-nrf52-0.14.6
+NAME=144lab-nrf52-0.14.7
 
 build:
 	docker build --no-cache --build-arg NAME=$(NAME) --rm -t $(NAME) .
